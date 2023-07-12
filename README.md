@@ -7,6 +7,7 @@
 
 #### 收银端视频演示
 
+https://gitee.com/xiaoxiangopen/pos
 
  **如果对您有帮助，您可以点右上角 “Star” 收藏一下 ，获取第一时间更新，谢谢！** 
 
