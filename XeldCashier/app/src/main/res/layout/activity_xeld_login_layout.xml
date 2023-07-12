@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/xeld_login_bg">
+
+    <LinearLayout
+        android:layout_width="1375px"
+        android:layout_height="686px"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/x493"
+            android:layout_height="@dimen/x686"
+            android:background="#FFF5EC"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="447px"
+                android:layout_height="615px"
+                android:scaleType="center"
+                android:background="@mipmap/xeld_login_brand" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="882px"
+            android:layout_height="@dimen/x686"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:id="@+id/tx_title_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/x88"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="490px"
+                    android:layout_height="wrap_content"
+                    android:text="智能门店收银系统"
+                    android:textColor="#fffd6b4b"
+                    android:textSize="56px"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_input_user"
+                android:layout_width="@dimen/x617"
+                android:layout_height="@dimen/x83"
+                android:layout_below="@+id/tx_title_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/add_prpduct_et_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingHorizontal="14px"
+                android:paddingVertical="20px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="账号"
+                    android:textColor="#FF181818"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="20.35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="#B0B0B0" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/account_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入员工账号"
+                    android:maxLength="20"
+                    android:paddingLeft="@dimen/x30"
+                    android:paddingRight="@dimen/x20"
+                    android:singleLine="true"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/x26"
+                    app:x_clearDrawable="@mipmap/clear_input" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_input_pwd"
+                android:layout_width="@dimen/x617"
+                android:layout_height="@dimen/x83"
+                android:layout_below="@+id/ly_input_user"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/x30"
+                android:background="@drawable/add_prpduct_et_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/x14"
+                android:paddingVertical="@dimen/x20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="密码"
+                    android:textColor="#FF181818"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="20.35dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#B0B0B0" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/input_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/x10"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingLeft="@dimen/x30"
+                    android:paddingRight="@dimen/x20"
+                    android:singleLine="true"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/x26"
+                    app:x_clearDrawable="@mipmap/clear_input"
+                    app:x_hidePwdDrawable="@mipmap/ic_hide"
+                    app:x_showPwdDrawable="@mipmap/ic_show" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ly_check_auto_login"
+                android:layout_width="@dimen/x617"
+                android:layout_height="@dimen/x63"
+                android:layout_below="@+id/ly_input_pwd"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/remember_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="记住密码"
+                    android:theme="@style/MyCheckBox" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/auto_ogon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="自动登录"
+                    android:theme="@style/MyCheckBox"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="@dimen/x617"
+                android:layout_height="@dimen/x80"
+                android:layout_below="@+id/ly_check_auto_login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_shape_17cb54"
+                android:text="登录"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

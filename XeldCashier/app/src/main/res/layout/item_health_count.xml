@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_rl_count"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x64"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:maxLength="5"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/x50"
+        android:text="韩梅梅"
+        android:textColor="@color/text_gray1"
+        android:textSize="@dimen/sp12" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="test_time"
+        android:textColor="@color/text_gray1"
+        android:textSize="@dimen/sp12" />
+
+    <TextView
+        android:id="@+id/detail_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/enter_iv"
+        android:text="39.2℃"
+        android:textColor="@color/text_red1"
+        android:textSize="@dimen/sp13" />
+
+    <ImageView
+        android:id="@+id/enter_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x40"
+        android:layout_marginRight="@dimen/x30"
+        android:src="@mipmap/icon_enter_gray" />
+
+
+
+</RelativeLayout>

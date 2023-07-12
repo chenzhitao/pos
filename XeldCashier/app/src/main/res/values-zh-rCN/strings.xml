@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">小二收银</string>
+    <string name="title_activity_splash">小二收银</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="units_tin">瓶</string>
+    <string name="units_kg">千克</string>
+    <string name="units_bag">袋</string>
+    <string name="units_each">份</string>
+    <string name="units_money">¥</string>
+    <string name="units_money_units">￥</string>
+
+    <!--收银演示菜单-->
+    <string name="menus_title">小二啷当收银程序</string>
+    <string name="menus_title1">商米收银演示demo</string>
+    <string name="menus_title2">商米收银</string>
+    <string name="menus_title3">SUNMI 欢迎你</string>
+    <string name="menus_number">编号</string>
+    <string name="menus_unit_price">单价</string>
+    <string name="menus_unit_num">数/重量</string>
+    <string name="menus_goods_name">品名</string>
+    <string name="menus_more">更多功能</string>
+
+    <!--小票打印-->
+    <string name="print_proofs">订单小票</string>
+    <string name="print_recharge_order">充值小票</string>
+    <string name="print_order_number">订单编号：</string>
+    <string name="print_order_time">下单时间：</string>
+    <string name="print_payment_method">支付方式：</string>
+    <string name="print_ali_wx">支付宝/微信</string>
+    <string name="print_tips_havemoney">此单消费为真实定额交易，请核实你的付款账户信息</string>
+    <string name="print_tips_nomoney">此单消费为消费凭据，如有疑问请联系店长！</string>
+    <string name="print_thanks">小二啷当，有格调有味道的精品美食!</string>
+    <string name="print_total_payment">累计金额：</string>
+    <string name="print_real_payment">实际收款：</string>
+    <string name="print_rmb">元</string>
+
+    <string name="pay_money">现金支付</string>
+    <string name="pay_face">扫脸支付</string>
+    <string name="pay_code">扫码支付</string>
+    <string name="pay_member">会员支付</string>
+    <string name="pay_member_hhzf">混合支付</string>
+    <string name="print_gzh_tips">关注 小二啷当美食商城 公众号</string>
+
+</resources>

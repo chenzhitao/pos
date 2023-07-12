@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">XeldCashier</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
+    <!--单位-->
+    <string name="units_tin">Can</string>
+    <string name="units_kg">KG</string>
+    <string name="units_each">Each</string>
+    <string name="units_bag">bag</string>
+    <string name="units_money">$</string>
+    <string name="units_money_units">$</string>
+    <string name="title_activity_order_list">OrderListActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <!--收银演示菜单-->
+    <string name="menus_title">Cashier Demo</string>
+    <string name="menus_title1">Sunmi cashier Demo</string>
+    <string name="menus_title2">Cashier of Sunmi</string>
+    <string name="menus_title3">Welcome to Sunmi</string>
+    <string name="menus_number">SN</string>
+    <string name="menus_unit_price">Price</string>
+    <string name="menus_unit_num">number/weight</string>
+    <string name="menus_goods_name">Name</string>
+    <string name="menus_more">More</string>
+
+    <!--小票打印-->
+    <string name="print_proofs">Print proofs</string>
+    <string name="print_order_number">Number:</string>
+    <string name="print_order_time">Time:</string>
+    <string name="print_payment_method">Payment:</string>
+    <string name="print_ali_wx">Alipay/WeChat</string>
+    <string name="print_tips_havemoney">This order is a real fixed amount transaction, please check</string>
+    <string name="print_tips_nomoney">This order is only a functional demonstration, non-real transaction</string>
+    <string name="print_thanks">Thanks for choosing SUNMI!</string>
+    <string name="print_total_payment">Total：</string>
+    <string name="print_real_payment">Paid-in：</string>
+    <string name="print_rmb">$</string>
+
+    <string name="pay_money">Cash</string>
+    <string name="pay_face">Face</string>
+    <string name="pay_code">Cash</string>
+    <string name="pay_member">Member</string>
+    <string name="shop_car">Cart</string>
+    <string name="shop_car_nothing">There are no items in your cart!</string>
+    <string name="goods_nothing">There are nothing items in your cart!</string>
+    <string name="shop_car_clear">Empty</string>
+    <string name="shop_car_total">Total</string>
+    <string name="shop_car_offer">Discount</string>
+    <string name="shop_car_number">Number</string>
+    <string name="shop_car_code">ID</string>
+    <string name="shop_car_receivable">receivable</string>
+    <string name="shop_car_goods_name">Name</string>
+    <string name="shop_car_unit_money">Amount</string>
+    <string name="shop_car_totle2">Total:</string>
+    <string name="shop_car_go_pay">PAY NOW</string>
+    <string name="shop_car_vip_pay">VIP PAY</string>
+    <string name="shop_car_vip_pay_tips">Input VIP Number</string>
+
+    <string name="user_hello_am">上午好，</string>
+    <string name="user_hello_pm">下午好，</string>
+    <string name="print_recharge_order">recharge_order</string>
+
+    <string name="print_gzh_tips">gzh</string>
+    <string name="pay_member_hhzf">hhzf</string>
+
+</resources>

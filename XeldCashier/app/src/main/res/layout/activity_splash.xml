@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/iv_splash_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/app_splash_bg"
+        android:visibility="visible">
+
+    </ImageView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x136"
+            android:background="#FFA641">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/x374"
+                android:layout_height="match_parent"
+                android:background="@mipmap/icon_print_logo"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x78"
+            android:layout_marginTop="@dimen/x17"
+            android:background="#FFFFFF">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x618"
+            android:layout_marginTop="@dimen/x17"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="@dimen/x143"
+                android:layout_height="50px"
+                android:layout_marginLeft="@dimen/x100"
+                android:background="#FFFF00">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="50px"
+                android:layout_marginLeft="@dimen/x100"
+                android:background="#FFFF00">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/x300"
+                android:layout_height="50px"
+                android:layout_marginLeft="@dimen/x100"
+                android:background="#FFFF00"
+                android:padding="@dimen/x10">
+
+                <ImageView
+                    android:id="@+id/iv_code_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x103"
+            android:background="#FFFF00">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x113"
+            android:background="#FFA641">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

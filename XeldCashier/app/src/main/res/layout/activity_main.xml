@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_main_top_paient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/activity_main_title_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ly_title_parent"
+            android:background="#FAFAFA"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ly_main_left_parent"
+                android:layout_width="508dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="508dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical"
+                        android:text="购物车列表（0）"
+                        android:textColor="#ff666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="取单"
+                        android:textColor="#ff999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="309dp"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <LinearLayout
+                        android:id="@+id/layout_card_list_title"
+                        android:layout_width="508dp"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="商品名称"
+                            android:textColor="#ff666666"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="售价"
+                            android:textColor="#ff666666"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="数量"
+                            android:textColor="#ff666666"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="小计"
+                            android:textColor="#ff666666"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="操作"
+                            android:textColor="#ff666666"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="508dp"
+                        android:layout_height="353dp"
+                        android:layout_below="@+id/layout_card_list_title"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ListView
+                            android:id="@+id/lv_cart_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </ListView>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="508dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="127dp"
+                        android:layout_height="22dp"
+                        android:text="￥750.00"
+                        android:textColor="#fffd6b4b"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="51dp"
+                        android:layout_height="23dp"
+                        android:text="共10件"
+                        android:textColor="#ff999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="65dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="56.5dp"
+                        android:background="@drawable/act_main_left_text_shape"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="挂单"
+                        android:textColor="#fffd6b4b"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="65dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:background="@drawable/act_main_left_text_shape"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="核销"
+                        android:textColor="#ff666666"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_order_confrim"
+                    android:layout_width="508dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/act_main_btn_bg_shape"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_order_confrim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="结 算"
+                        android:textColor="#ffffffff"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ly_main_right_parent"
+                android:layout_width="760dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_main_right_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="500dp"
+                        android:layout_height="39dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/input_shop_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x8"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:drawablePadding="@dimen/x10"
+                            android:hint="请输入商品名称"
+                            android:maxLength="20"
+                            android:paddingLeft="@dimen/x30"
+                            android:paddingRight="@dimen/x20"
+                            android:singleLine="true"
+                            android:textSize="@dimen/sp14"
+                            app:x_clearDrawable="@mipmap/clear_input"
+                            app:x_hidePwdDrawable="@mipmap/ic_hide"
+                            app:x_showPwdDrawable="@mipmap/ic_show" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="760dp"
+                        android:layout_height="470dp"
+                        android:background="#FFFFFF"
+                        android:orientation="horizontal">
+
+                        <GridView
+                            android:id="@+id/gv_shop_list"
+                            android:layout_width="652dp"
+                            android:layout_height="380dp"
+                            android:columnWidth="200dp"
+                            android:horizontalSpacing="@dimen/dp_10"
+                            android:numColumns="3"
+                            android:stretchMode="columnWidth"
+                            android:visibility="visible"></GridView>
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="353dp"
+                            android:layout_marginLeft="@dimen/dp_10">
+
+                            <ListView
+                                android:id="@+id/lv_product_cata_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </ListView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="745dp"
+                        android:layout_height="57dp"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="更多操作" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

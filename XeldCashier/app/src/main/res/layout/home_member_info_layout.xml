@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="508dp"
+    android:layout_height="52dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/app_ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_member_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="18611128418"
+            android:textColor="#ff666666"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/tv_member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="周月"
+            android:textColor="#ff666666"
+            android:textSize="8sp" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="3dp"
+            android:background="#FD6B4B" />
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="35dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="32dp"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:text="积分"
+                android:textColor="#ff666666"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/tv_member_integral"
+                android:layout_width="32dp"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#fffd6b4b"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="#FD6B4B" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:text="余额"
+                android:textColor="#ff666666"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/tv_member_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="100||1000"
+                android:textColor="#fffd6b4b"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_member_recharge"
+            android:layout_width="66dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="50dp"
+            android:background="#FFFD6B4B"
+            android:gravity="center"
+            android:text="充值"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_member_exit"
+            android:layout_width="66dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:background="#FFFD6B4B"
+            android:gravity="center"
+            android:text="退出"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

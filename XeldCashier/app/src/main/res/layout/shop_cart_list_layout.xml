@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:gravity="center"
+    android:minHeight="100px"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_cart_list_id"
+        android:layout_width="12dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#ff999999"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_cart_list_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/app_ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_cart_list_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="牛轧奶芙两盒装"
+            android:textColor="#ff666666"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_cart_list_product_price"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="15.00"
+            android:textColor="#ff666666"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_member_item_price"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="31dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="会员价："
+                android:textColor="#fffd6b4b"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_list_item_vip_price"
+                android:layout_width="0dp"
+                android:layout_height="31dp"
+                android:layout_weight="1"
+                android:text="12.00"
+                android:textColor="#fffd6b4b"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_cart_list_del"
+            android:layout_width="@dimen/x45"
+            android:layout_height="@dimen/x45"
+            android:layout_gravity="center"
+            android:src="@mipmap/iv_cart_del_num" />
+
+        <TextView
+            android:id="@+id/tv_cart_list_prodect_num"
+            android:layout_width="19dp"
+            android:layout_height="31dp"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="#ff666666"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_cart_list_add"
+            android:layout_width="@dimen/x45"
+            android:layout_height="@dimen/x45"
+            android:layout_gravity="center"
+            android:src="@mipmap/iv_cart_add_num" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cart_list_item_total"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="150.00"
+        android:textColor="#ff666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_cart_list_prodect_operation"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="#fffd6b4b"
+        android:textSize="12sp" />
+
+</LinearLayout>

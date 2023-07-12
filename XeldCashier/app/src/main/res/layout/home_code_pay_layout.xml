@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="893px"
+    android:layout_height="1080px"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="29dp"
+            android:text="应收金额："
+            android:textColor="#ff494242"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tv_code_actualTotal"
+            android:layout_width="110dp"
+            android:layout_height="26dp"
+            android:text="￥750.00"
+            android:textColor="#fffd6b4b"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="165dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="请扫描顾客的收款码"
+            android:textColor="#ff494242"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="144dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="支持支付宝、微信、云闪付"
+            android:textColor="#ff666666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/scan_code_fail_tips"
+            android:layout_width="144dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="扫码失败，可重新扫码"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="189dp"
+            android:layout_height="189dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@mipmap/pay_code_tips" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="113px"
+        android:layout_marginTop="30dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/remember_pwd"
+            android:layout_width="132dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:background="@drawable/act_main_left_text_shape"
+            android:gravity="center"
+            android:text="打印小票"
+            android:theme="@style/MyCheckBox"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_again_order"
+            android:layout_width="82dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/x60"
+            android:background="@drawable/act_main_left_text_shape"
+            android:gravity="center"
+            android:text="重新支付"
+            android:visibility="gone"
+            android:textColor="#ffffa53f"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel_code_pay_order"
+            android:layout_width="82dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/x30"
+            android:background="@drawable/act_main_left_text_shape"
+            android:gravity="center"
+            android:text="取消交易"
+            android:textColor="#ffffa53f"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

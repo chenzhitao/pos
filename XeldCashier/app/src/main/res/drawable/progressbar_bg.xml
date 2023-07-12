@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  设置背景色  -->
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/shape_gray_15_progress_bar" />
+    <!--  设置进度条颜色  -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="7dp" />
+                <gradient
+                    android:angle="45"
+                    android:centerColor="@color/color_3c4161"
+                    android:centerY="@dimen/dp_15"
+                    android:endColor="@color/color_3c4161"
+                    android:startColor="@color/color_3c4161" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

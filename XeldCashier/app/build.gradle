@@ -1,0 +1,137 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.xeld.cashier"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 8
+        versionName "1.7"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            // 注意：这里需要添加项目所需 CPU 类型的最小集
+            abiFilters "armeabi", "armeabi-v7a", "x86_64", "x86"
+        }
+        manifestPlaceholders = [
+                //个推应用参数，请填写您申请的 GETUI_APP_ID，GETUI_APP_KEY，GETUI_APP_SECRET 值
+                GETUI_APP_ID    : "zdepYgz8Zs8QsYUizuDba7",
+                GETUI_APP_KEY   : "uOwjeZVA9w9Dz4GlOKQPi1",
+                GETUI_APP_SECRET: "mgYQChHz5e9bVEbxgXQUL2",
+        ]
+        // 注意：导入so库 在app目录下 新建libs目录，一定要加入这个配置
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+    }
+    signingConfigs {
+        robert {
+            storePassword 'xeld2020'
+            keyPassword 'xeld2020'
+            storeFile file('keystore/cashier.jks')
+            keyAlias 'key0'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+dependencies {
+
+//    implementation 'com.android.support:appcompat-v7:28.0.0'
+    compile files('libs/Msc.jar')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation "com.android.support:support-annotations:28.0.0"
+//    implementation 'com.android.support:design:24.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'android.arch.lifecycle:livedata:1.1.1'
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.wear:wear:1.0.0'
+    testImplementation 'junit:junit:4.+'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+//    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+//    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+//    implementation 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+//    implementation  project(':library')
+    implementation 'com.orhanobut:logger:2.1.0' // 打印日志
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    annotationProcessor 'androidx.annotation:annotation:1.0.0'
+    //implementation 'com.android.support:appcompat-v7:28.0.2'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+
+    // implementation 'com.android.support:design:28.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    //黄油刀
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    //复合输入框
+    api('com.xw.repo:xedittext-androidx:2.2.6@aar')
+    //网络请求
+    implementation 'com.zhouyou:rxeasyhttp:2.1.5'
+    //弹框
+    implementation 'com.lxj:xpopup:1.8.10-x'
+    implementation 'com.alibaba:fastjson:1.1.71.android'
+    //日志
+    implementation 'com.elvishew:xlog:1.6.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //个推
+    implementation 'com.getui:sdk:2.14.2.0'  //请将此处的 ${version} 替换成您当前相应的 SDK 版本号，如 2.14.2.0
+    //列表库
+    implementation 'com.github.SelfZhangTQ:loadState:1.1.0'
+    implementation 'com.github.SelfZhangTQ:TRecyclerView:2.5.0'
+    //listadapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.sunmi:printerlibrary:1.0.5'
+    implementation 'com.sunmi:SunmiOpenService:1.0.2'
+    implementation 'com.sunmi:DeviceManagerLibrary:1.0.17'
+    implementation 'com.sunmi:DS_Lib:1.0.16'
+    implementation('com.sunmi:SunmiWidgetLib:1.0.1') {
+        exclude group: 'com.android.support'
+        exclude module: 'support-annotations:'
+    }
+    //蒲公英日志上传
+//    implementation 'com.pgyersdk:sdk:3.0.10'
+    implementation 'com.pgyer:analytics:4.2.1'
+    //日期选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    //二维码
+    implementation 'com.king.zxing:zxing-lite:1.1.7-androidx'
+    //状态栏
+    implementation 'com.zackratos.ultimatebarx:ultimatebarx:0.6.0'
+}

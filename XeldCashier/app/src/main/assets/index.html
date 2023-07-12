@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+	</head>
+	<body>
+		<div class="container" id="app">
+			<div class="header">
+				<div class="goback-btn" @click="goback">
+					<img src="img/goback.png" />
+					<span>返回</span>
+				</div>
+				<div class="page-title">交接班</div>
+			</div>
+			<div class="body">
+				<div class="left-side">
+					<ul>
+						<li class="active">交接班统计</li>
+						<li>销售明细</li>
+						<li>退款明细</li>
+						<li>充值明细</li>
+					</ul>
+				</div>
+				<div class="right-side">
+					<div class="casher-logintime">
+						<div class="casher">收银员：曹梦秋</div>
+						<div class="logintime">登录时间：<span class="gray">{{info.loginTime}}</span></div>
+					</div>
+					<div class="amount">
+						<div class="amount-item">
+							<div class="img"><img src="img/total.png" ></div>
+							<div class="count">￥{{(info.totalSales)}}</div>
+							<div class="count-title">总销售额</div>
+						</div>
+						<div class="amount-item">
+							<div class="img"><img src="img/cash.png" ></div>
+							<div class="count">￥{{(info.cashSales)}}</div>
+							<div class="count-title">现金收款总额</div>
+						</div>
+						<div class="amount-item">
+							<div class="img"><img src="img/online.png" ></div>
+							<div class="count">￥{{(info.umsPaySales)}}</div>
+							<div class="count-title">线上支付收款总额</div>
+						</div>
+						<div class="amount-item">
+							<div class="img"><img src="img/baremoney.png" ></div>
+							<div class="count">￥{{(info.accountSales)}}</div>
+							<div class="count-title">余额支付支付总额</div>
+						</div>
+					</div>
+
+					<div class="statistics">
+						<div class="statistics-item">
+							<table width="100%" style="border-collapse: collapse;">
+								<tr>
+									<th colspan="2" width="100%">销售统计</th>
+								</tr>
+								<tr>
+									<td rowspan="2" width="40%">实收总额(元)<br>￥{{info.totalSales}}</td>
+									<td>现金支付：<span>￥{{info.totalSales.toFixed(1)}}</span></td>
+								</tr>
+								<tr>
+									<td>线上支付：<span>￥{{info.umsPaySales.toFixed(1)}}</span></td>
+								</tr>
+								<tr>
+									<td rowspan="2">成交单数(元)<br>{{(info.dealCount)}}</td>
+									<td>现金笔数：<span>{{info.cashCount}}</span></td>
+								</tr>
+								<tr>
+									<td>线上笔数：<span>{{info.umsCount}}</span></td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="statistics-item second-item">
+							<table width="100%" style="border-collapse: collapse;">
+								<tr>
+									<th colspan="2" width="100%">充值统计</th>
+								</tr>
+								<tr>
+									<td rowspan="2">充值总额(元)</td>
+									<td rowspan="2">门店充值：{{(info.userDepositAmount)}}</td>
+								</tr>
+								<tr>
+								</tr>
+								<tr>
+									<td>充值单数(笔)</td>
+									<td><span>充值笔数：{{(info.userDepositCount)}}</span></td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="statistics-item">
+							<table width="100%" style="border-collapse: collapse;">
+								<tr>
+									<th colspan="2" width="100%">退款统计</th>
+								</tr>
+								<tr>
+									<td rowspan="2" width="40%">退款统计(元)<br>￥{{(info.appTransactionRefundAmount)}}</td>
+									<td>现金退款：<span>￥{{(info.appTransactionRefundCashAmount)}}</span></td>
+								</tr>
+								<tr>
+									<td>线上退款：<span>￥{{(info.appTransactionRefundUmsAmount)}}</span></td>
+								</tr>
+								<tr>
+									<td rowspan="2">退款笔数(元)<br>{{info.appTransactionRefundCount}}</td>
+									<td>现金笔数：<span>{{info.appTransactionRefundCashCount}}</span></td>
+								</tr>
+								<tr>
+									<td>线上笔数：<span>{{info.appTransactionRefundUmsCount}}</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="choosebox" :class="{'ifPrintTicket': ifPrintTicket}" @click="ifPrintTicket = !ifPrintTicket">
+					<span v-show="!ifPrintTicket" class="unchoosed"></span>
+					<img v-show="ifPrintTicket" src="img/choosed.png" >
+					<span class="info-title">交接班打印小票</span>
+				</div>
+				<div class="handover-btn">交接班并登出</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		const app = new Vue({
+			el: '#app',
+			data: {
+				ifPrintTicket: true,
+				info: {
+					"loginTime": '',
+					"totalSales": 0.00,
+					"cashSales": 0.00,
+					"umsPaySales": 0.00,
+					"appTransactionRefunds": [],
+					"orders": [],
+					"userDeposits": [],
+					"userDepositAmount": 0.00,
+					"userDepositCount": 0,
+					"dealCount": 0,
+					"cashCount": 0,
+					"umsCount": 0,
+					"appTransactionRefundAmount": 0.00,
+					"appTransactionRefundCashAmount": 0.00,
+					"appTransactionRefundUmsAmount": 0.00,
+					"appTransactionRefundCount": 0,
+					"appTransactionRefundCashCount": 0,
+					"appTransactionRefundUmsCount": 0,
+					"accountSales": 0
+				}
+			},
+			created() {
+				android.getData('app.fresh')
+			},
+			methods: {
+				//刷新页面数据
+				fresh(data) {
+					console.log(data)
+					this.info = JSON.parse(data).data
+				},
+				//返回
+				goback() {
+					android.goBack()
+				}
+			}
+		})
+
+	</script>
+	<style type="text/css">
+		.container {
+			background-color: #F7F7F7;
+			height: 100vh;
+		}
+
+		.header {
+			height: 10%;
+			background-color: #FFA53F;
+			width: 100;
+			position: relative;
+			color: #ffffff;
+			font-size: 28px;
+		}
+
+		.header .goback-btn {
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.header .goback-btn img {
+			height: 22px;
+			margin-right: 1px;
+		}
+
+		.header .page-title {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.body {
+			width: 100%;
+			height: 80%;
+			display: flex;
+		}
+
+		.body .left-side {
+			width: 16%;
+			height: 100%;
+			background-color: #FFFFFF;
+			text-align: center;
+		}
+
+		.body .left-side ul {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.body .left-side li {
+			height: 80px;
+			width: 100%;
+			line-height: 80px;
+			color: #666666;
+			list-style: none;
+			font-size: 18px;
+		}
+
+		.body .left-side .active {
+			color: #FFA53F;
+			border-bottom: 3px solid #FFA53F;
+		}
+
+		.body .right-side {
+			box-sizing: border-box;
+			width: 84%;
+			height: 100%;
+			padding: 20px;
+			color: #666666;
+		}
+
+		.body .right-side .casher-logintime {
+			width: 100%;
+			background-color: #FFFFFF;
+			border-radius: 10px;
+			height: 60px;
+			line-height: 60px;
+			display: flex;
+			box-sizing: border-box;
+			padding: 0 10px;
+		}
+
+		.body .right-side .casher-logintime .logintime {
+			margin-left: 20px;
+			color: #666666;
+		}
+
+		.body .right-side .casher-logintime .logintime .gray {
+			color: #ADADAD;
+		}
+
+		.right-side .amount {
+			width: 100%;
+			height: 33%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.right-side .amount .amount-item {
+			height: 100%;
+			width: 22%;
+			background-color: #FFFFFF;
+			margin-top: 20px;
+			border-radius: 12px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.right-side .amount .amount-item div {
+			/* margin-bottom: 8px; */
+			font-size: 19px;
+		}
+		.right-side .amount .amount-item .count{
+			font-size: 30px;
+			color: #333333;
+		}
+
+		.right-side .amount .amount-item .img img{
+			height: 100px;
+		}
+
+		.right-side .statistics {
+			margin-top: 20px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			height: 52%;
+		}
+
+		.right-side .statistics .statistics-item {
+			width: 31%;
+			height: 100%;
+			background-color: #FFFFFF;
+			margin-top: 20px;
+			border-radius: 12px;
+			font-size: 19px;
+		}
+		
+		.right-side .statistics .statistics-item table{
+			height: 100%;
+			width: 100%;
+		}
+		.right-side .statistics .statistics-item table tr:first-child{
+			height: 20%;
+		}
+		.right-side .statistics .statistics-item table tr:nth-child(2),.right-side .statistics .statistics-item table tr:nth-child(3){
+			height: 25%;
+		}
+		
+
+		.right-side .statistics .statistics-item td {
+			border: 1px solid #F1F1F1;
+			text-align: center;
+		}
+		
+		.second-item table tr:nth-child(2){
+			height: 60%;
+		}
+		
+
+		.footer {
+			height: 10%;
+			border-top: 1px solid #f1f1f1;
+			background-color: #FFFFFF;
+			display: flex;
+			justify-content: space-between;
+			box-sizing: border-box;
+			padding: 0 30px;
+			align-items: center;
+			font-size: 21px;
+		}
+		.footer .choosebox {
+			display: flex;
+			align-items: center;
+			color: #b1b1b1;
+		}
+		.footer .choosebox img{
+			height: 26px;
+		}
+		.footer .choosebox .info-title{
+			margin-left: 5px;
+		}
+		.footer .ifPrintTicket{
+			color: #FD6B4B;
+		}
+		.footer .choosebox .unchoosed{
+			height: 26px;
+			width: 26px;
+			border: 1px solid #b1b1b1;
+			border-radius: 50%;
+		}
+		
+		.footer .handover-btn{
+			width: 190px;
+			height: 50px;
+			border: 1px solid #FD6B4B;
+			border-radius: 12px;
+			line-height: 50px;
+			text-align: center;
+			color: #fd6b4b;
+			font-size: 23px;
+		}
+	</style>
+</html>

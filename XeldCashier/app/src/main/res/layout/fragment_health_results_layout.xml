@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg_gray"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/layout_user_info" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/x12">
+
+        <View
+            android:layout_width="@dimen/x5"
+            android:layout_height="@dimen/x30"
+            android:layout_marginLeft="@dimen/x28"
+            android:layout_marginRight="@dimen/x10"
+            android:background="#0CBA47" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="PingFangSC"
+            android:gravity="left"
+            android:text="异常记录"
+            android:textColor="#FF333333"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragment_layout"
+        android:name="com.xeld.cashier.fragment.HealthResultsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

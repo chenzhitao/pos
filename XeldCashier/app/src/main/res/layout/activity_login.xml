@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg_gray"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="#17CB54" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140px"
+        android:src="@mipmap/icon_xueshi" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="320px">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4px"
+            android:layout_marginBottom="6px"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="6dp"
+            app:cardPreventCornerOverlap="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30px"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingVertical="28px"
+                    android:text="用户登录"
+                    android:textColor="#FF0CAE43"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/logo_et_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14px"
+                    android:paddingVertical="20px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="账号"
+                        android:textColor="#FF181818"
+                        android:textSize="15sp" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/account_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8px"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请输入用账号"
+                        android:maxLength="20"
+                        android:paddingLeft="30px"
+                        android:paddingRight="20px"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        app:x_clearDrawable="@mipmap/clear_input" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30px"
+                    android:background="@drawable/logo_et_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14px"
+                    android:paddingVertical="20px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="密码"
+                        android:textColor="#FF181818"
+                        android:textSize="15sp" />
+
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/input_pwd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8px"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawablePadding="10px"
+                        android:hint="请输入密码"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:paddingLeft="30px"
+                        android:paddingRight="20px"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        app:x_clearDrawable="@mipmap/clear_input"
+                        app:x_hidePwdDrawable="@mipmap/ic_hide"
+                        app:x_showPwdDrawable="@mipmap/ic_show" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/remember_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="记住密码"
+                        android:theme="@style/MyCheckBox" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/auto_ogon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="自动登录"
+                        android:theme="@style/MyCheckBox" />
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginHorizontal="10px"
+                    android:layout_marginTop="100px"
+                    android:layout_marginBottom="90px"
+                    android:background="@drawable/btn_shape_17cb54"
+                    android:text="登录"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/view_bg"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10px"
+            android:layout_height="400px"
+            android:background="@drawable/view_bg" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20px"
+        android:text="鄂ICP备18006287号 湖北小二啷当生物科技有限公司"
+        android:textColor="#FF666666"
+        android:textSize="9sp" />
+</RelativeLayout>
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_4dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="730px"
+        android:layout_height="@dimen/x560"
+        android:gravity="center"
+        android:minHeight="@dimen/x560"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_order_pay_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="50px"
+            android:gravity="center"
+            android:text="请扫描顾客的付款二维码"
+            android:textColor="#666666"
+            android:textSize="21sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50px"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/x13"
+            android:text="支持支付宝、微信、云闪付"
+            android:textColor="#666666"
+            android:textSize="21sp" />
+
+        <ImageView
+            android:id="@+id/iv_order_pay_state"
+            android:layout_width="@dimen/x260"
+            android:layout_height="@dimen/x260"
+            android:layout_marginTop="@dimen/x57"
+            android:background="@mipmap/pay_code_tips"
+            android:scaleType="center" />
+    </LinearLayout>
+
+
+    <View
+        style="@style/CommonLine"
+        android:layout_width="match_parent"
+        android:layout_marginTop="7dp"
+        android:background="#d2d2da"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/two_btn_ll"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#d2d2da" />
+
+        <TextView
+            android:id="@+id/sure_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/blue_color"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+</LinearLayout>

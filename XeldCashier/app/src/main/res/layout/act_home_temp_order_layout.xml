@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x120"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/x55"
+            android:gravity="center"
+            android:text="取单"
+            android:textColor="#ff494242"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tv_close_temp_order_fragment"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="500dp"
+            android:background="@drawable/act_main_left_text_shape"
+            android:gravity="center"
+            android:text="关闭"
+            android:textColor="#fffd6b4b"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <include layout="@layout/fragment_ibase_list" />
+
+</LinearLayout>

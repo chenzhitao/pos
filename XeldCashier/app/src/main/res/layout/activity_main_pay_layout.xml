@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1143px"
+    android:layout_height="1080px"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="@dimen/x250"
+        android:layout_height="1080px"
+        android:background="#ECECEC"
+        android:orientation="vertical">
+
+        <!--        android:background="@drawable/pay_type_btn_selete"-->
+
+        <LinearLayout
+            android:id="@+id/layout_code_pay"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@mipmap/pay_code_type">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_pay_code_tips"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:text="扫码\n付款"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_cash_pay"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@mipmap/pay_cash_type">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_pay_cash_tips"
+                android:layout_width="37dp"
+                android:layout_height="34dp"
+                android:gravity="center"
+                android:text="现金\n收款"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_member_pay"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@mipmap/pay_member_type">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_pay_member_tips"
+                android:layout_width="37dp"
+                android:layout_height="34dp"
+                android:gravity="center"
+                android:text="会员\n支付"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_pay_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/home_code_pay_detail"
+            layout="@layout/home_code_pay_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/home_member_pay_detail"
+            layout="@layout/home_member_pay_layout"
+            android:visibility="gone" />
+
+        <!-- <include
+             android:id="@+id/home_susses_pay_detail"
+             layout="@layout/pay_success_layout"
+             android:visibility="gone" />-->
+
+        <include
+            android:id="@+id/home_cash_pay_detail"
+            layout="@layout/activity_main_cash_pay_layout" />
+
+    </LinearLayout>
+
+</LinearLayout>
